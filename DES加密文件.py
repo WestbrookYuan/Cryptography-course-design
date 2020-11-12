@@ -249,17 +249,12 @@ def get_mode():
         out_mess = bin2str(s)
         print("加密过后的内容:" + out_mess)
         write_in_file(out_mess)
-        # print(type(out_mess))
-        # base_out_mess = base64.b64encode(out_mess.encode('utf-8'))
-        # print("Base64编码过后:"+ base_out_mess.decode())
+
     elif mode == '2':
-        # print("请输入信息输入字符串不能为空：")
-        # message = input().replace(' ', '')
         print("请输入你的秘钥：")
         key = input().replace(' ', '')
         message = read_out_file()
         s = all_message_decrypt(message, key)
-        # out_mess = bin2str(s)
         print("解密后的信息：" + s)
     else:
         print("请重新输入！")
